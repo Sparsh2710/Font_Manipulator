@@ -1,0 +1,31 @@
+.heading {
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+    font-size: 30px;
+    margin: 0px;
+    width: 100%;
+    box-shadow: 5px 5px 5px rgb(0, 196, 196);
+}
+
+.note {
+    font-family: 'Piazzolla', serif;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+}
+
+.copy_right_footer {
+    font-family: 'Raleway', sans-serif;
+    position: fixed;
+    color: rgb(29, 30, 88);
+    bottom: 0;
+    width: 100%;
+    background-image: linear-gradient(white 40%, dodgerblue 100%);
+    line-height: 3;
+    text-align: center;
+}
+
+canvas {
+    border: 5px 5px white;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px gray;
+}
