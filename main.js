@@ -1,5 +1,3 @@
-noseX = 0;
-noseY = 0;
 Difference = 0;
 leftWristX = 0;
 rightWristX = 0;
@@ -14,7 +12,16 @@ function setup() {
     poseNet.on('pose', gotPoses);
 }
 
-function gotPoses(results) { 
+function gotPoses(results) {
+    if (results.length > 0) {
+        console.log(results);
+
+        leftWristX = results[0].pose.leftWrist.x;
+        rightWristX = results[0].pose.rightWrist.x;
+        Difference = leftWristX - rightWristX;
+        Math.floor(Difference);
+        console.log("leftWristX = " + leftWristX + "rightWristX + " + rightWristX + "Difference = " + Difference);
+    }
 }
 
 function modelLoaded() {
@@ -23,4 +30,10 @@ function modelLoaded() {
 
 function draw() {
     background('#d0e8f2');
+
+    textSize(Difference);
+    fill(25, 40, 65);
+    text('SPARSH', 10, 200);
+
+    document.getElementById("font-size").innerHTML = "Font Size = " + Difference +"px ";
 }
